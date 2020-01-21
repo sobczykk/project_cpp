@@ -24,12 +24,15 @@ class MainWindow : public QMainWindow
 
 public:
     QSqlDatabase mydb;
+    QSqlDatabase db_days;
+
 
     void connClose()
     {
         mydb.close();
         mydb.removeDatabase(QSqlDatabase::defaultConnection);
     }
+
     bool connOpen()
     {
         mydb = QSqlDatabase ::addDatabase("QSQLITE");
@@ -45,6 +48,8 @@ public:
              }
     }
 
+    void show_table(QString posilek, QString nazwa_tablicy);
+    void suma(QString nazwa_tabeli, QString nazwa_tabeli2, QString nazwa_tabeli3);
 
 public:
     explicit MainWindow(QWidget *parent = 0);
