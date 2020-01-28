@@ -48,8 +48,8 @@ public:
              }
     }
 
-    void show_table(QString posilek, QString nazwa_tablicy);
-    void suma(QString nazwa_tabeli, QString nazwa_tabeli2, QString nazwa_tabeli3);
+    void show_table(QString posilek, QString wybrany_dzien);
+    void suma(QString wybrany_dzien);
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -58,6 +58,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_calendarWidget_clicked();
 
 private:
     Ui::MainWindow *ui;
